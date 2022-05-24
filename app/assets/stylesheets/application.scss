@@ -1,0 +1,13 @@
+@import "bootstrap/scss/bootstrap";
+a {
+  text-decoration: none;
+}
+
+div > a {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}

@@ -2,13 +2,13 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
+      <%= render 'checkbox', task: task%>
       <%= link_to task.title, task_path(task) %>
-      <%= link_to "Delete",
-            task_path(task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+      <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fa-regular fa-trash-can"></i>
+      <% end %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to 'Add a new task', tasks_new_path %>
+<%= link_to 'Add a new task', new_task_path %>

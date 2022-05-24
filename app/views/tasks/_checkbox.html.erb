@@ -1,0 +1,7 @@
+<%= link_to check_task_path(task), method: :patch do %>
+  <% if task.completed %>
+    <i class="fa-regular fa-square-check"></i>
+  <% else %>
+  <i class="fa-regular fa-square"></i>
+  <% end %>
+<% end %>
